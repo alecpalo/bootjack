@@ -2,6 +2,7 @@
 import Link from "next/link";
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai"
 import {useEffect, useState} from "react";
+import Image from "next/image";
 
 
 const Navbar = () => {
@@ -34,8 +35,8 @@ const Navbar = () => {
     return(
         <nav className={`fixed z-10 w-full transition duration-400 ease-in-out transform h-24 text-white ${header ? 'bg-blue-950' : 'bg-white/0'}`}>
             <div className={"flex justify-between items-center h-full w-full px-4 2xl:px-16"}>
-                <div className={"pt-4"}>
-                    LOGO
+                <div className={""}>
+                    <Image src={"/logo.png"} alt={"Logo"} width={100} height={200}></Image>
                 </div>
                 <div className={"hidden md:flex pr-10"}>
                     <ul className={"hidden sm:flex"}>
