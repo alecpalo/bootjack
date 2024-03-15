@@ -4,10 +4,10 @@ import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return(
-        <footer className={"bg-white pb-10 px-10 text-blue-900"}>
+        <footer className="bg-white w-full text-gray-800 text-center py-4 lg:px-20 sm:px-6">
             <div className={"w-full space-x-10 flex  text-black p-10"}>
                 <div className={"flex flex-col md:w-3/4 w-full"}>
-                    <Image src={"/logo.png"} alt={""} width={300} height={200}></Image>
+                    <img src={"/logo.png"} alt={""} className={"w-64 h-48"}></img>
                 </div>
                 <div className={"md:w-1/4 w-full flex justify-end"}>
                     <div className={"flex flex-col justify-between"}>

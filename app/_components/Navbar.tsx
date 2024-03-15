@@ -7,45 +7,24 @@ import Image from "next/image";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [header, setHeader] = useState(false);
 
-    const linkStyle = "ml-10 text-xl font-bold text-white";
+    const linkStyle = "ml-10 text-2xl font-bold text-white";
     const underlineStyle = "block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white";
 
     const handleNav = () => {
         setMenuOpen(!menuOpen);
     };
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleScroll = () => {
-        if(window.scrollY >= 50) {
-            setHeader(true);
-        } else {
-            setHeader(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.addEventListener("scroll", handleScroll);
-        }
-    }, [])
-
     return(
-        <nav className={`fixed z-20 w-full transition duration-400 ease-in-out transform h-24 text-white ${header ? 'bg-blue-950' : 'bg-white/0'}`}>
+        <nav className={`absolute z-20 w-full transition duration-400 ease-in-out transform h-24 text-white`}>
             <div className={"flex justify-between items-center h-full w-full px-4 2xl:px-16"}>
                 <div className={""}>
-                    <Image src={"/logo.png"} alt={"Logo"} width={100} height={200}></Image>
+                    <Link href={"/"}>
+                        <Image src={"/logo.png"} alt={"Logo"} width={100} height={100}></Image>
+                    </Link>
                 </div>
                 <div className={"hidden md:flex pr-10"}>
                     <ul className={"hidden sm:flex"}>
-                        <Link href={"/"} className={"group transition duration-500"}>
-                            <li className={linkStyle}>
-                                Home
-                                <span className={underlineStyle}></span>
-                            </li>
-                        </Link>
                         <Link href={"/Portfolio"} className={"group transition duration-500"}>
                             <li className={linkStyle}>
                                 Portfolio
@@ -55,6 +34,18 @@ const Navbar = () => {
                         <Link href={"/Design"} className={"group transition duration-500"}>
                             <li className={linkStyle}>
                                 Design
+                                <span className={underlineStyle}></span>
+                            </li>
+                        </Link>
+                        <Link href={"/About"} className={"group transition duration-500"}>
+                            <li className={linkStyle}>
+                                About
+                                <span className={underlineStyle}></span>
+                            </li>
+                        </Link>
+                        <Link href={"/Contact"} className={"group transition duration-500"}>
+                            <li className={linkStyle}>
+                                Contact
                                 <span className={underlineStyle}></span>
                             </li>
                         </Link>
