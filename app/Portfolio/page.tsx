@@ -4,12 +4,12 @@ export default function Portfolio() {
     return(
         <main className={"bg-white"}>
             <div className={"h-32"}></div>
-            <div className={"text-gray-800 w-full text-center pb-10"}>
+            <div className={"text-gray-800 w-full text-center"}>
                 <h1 className={"text-2xl"}>
                     Maybe some quote about something IDK
                 </h1>
             </div>
-            <div className={"w-full h-full flex flex-wrap justify-center"}>
+            <div className={"w-full h-full flex flex-wrap justify-center py-10"}>
                 <PropertyHero/>
                 <PropertyHero/>
                 <PropertyHero/>
