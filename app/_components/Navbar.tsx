@@ -8,15 +8,15 @@ import Image from "next/image";
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const linkStyle = "ml-10 text-2xl font-bold text-white";
-    const underlineStyle = "block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white";
+    const linkStyle = "ml-10 text-2xl font-bold";
+    const underlineStyle = "block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-800";
 
     const handleNav = () => {
         setMenuOpen(!menuOpen);
     };
 
     return(
-        <nav className={`absolute z-20 w-full transition duration-400 ease-in-out transform h-24 text-white`}>
+        <nav className={`absolute z-20 w-full transition duration-400 ease-in-out transform h-24 bg-white text-gray-800`}>
             <div className={"flex justify-between items-center h-full w-full px-4 2xl:px-16"}>
                 <div className={""}>
                     <Link href={"/"}>
