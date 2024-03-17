@@ -8,7 +8,7 @@ import Image from "next/image";
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const linkStyle = "ml-10 text-2xl font-bold";
+    const linkStyle = "ml-10 text-xl font-bold";
     const underlineStyle = "block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-800";
 
     const handleNav = () => {
@@ -25,6 +25,12 @@ const Navbar = () => {
                 </div>
                 <div className={"hidden md:flex pr-10"}>
                     <ul className={"hidden sm:flex"}>
+                        <Link href={"/"} className={"group transition duration-500"}>
+                            <li className={linkStyle}>
+                                Home
+                                <span className={underlineStyle}></span>
+                            </li>
+                        </Link>
                         <Link href={"/Portfolio"} className={"group transition duration-500"}>
                             <li className={linkStyle}>
                                 Portfolio
@@ -71,14 +77,24 @@ const Navbar = () => {
                                 Home
                             </li>
                         </Link>
-                        <Link href={"/OurTeams"} onClick={handleNav}>
+                        <Link href={"/Portfolio"} onClick={handleNav}>
                             <li className={linkStyle}>
                                 Portfolio
                             </li>
                         </Link>
-                        <Link href={"/OurBoats"} onClick={handleNav}>
+                        <Link href={"/Design"} onClick={handleNav}>
                             <li className={linkStyle}>
                                 Design
+                            </li>
+                        </Link>
+                        <Link href={"/About"} onClick={handleNav}>
+                            <li className={linkStyle}>
+                                About
+                            </li>
+                        </Link>
+                        <Link href={"/Contact"} onClick={handleNav}>
+                            <li className={linkStyle}>
+                                Contact
                             </li>
                         </Link>
                     </ul>

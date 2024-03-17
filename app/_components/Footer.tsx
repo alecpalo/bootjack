@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
     return(
-        <footer className="bg-gray-800 w-full text-gray-500 py-10 lg:px-10 sm:px-6">
+        <footer className="bg-gray-800 w-full text-gray-500 py-10 lg:px-10 px-6">
             <div className={"flex flex-col w-full justify-start space-y-4"}>
                 <h1 className={"text-xl text-gray-200 font-bold"}>
                     Bootjack Ventures
