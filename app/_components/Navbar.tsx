@@ -72,7 +72,7 @@ const Navbar = () => {
                 </div>
                 <div className={"flex-col py-4"}>
                     <ul className={""}>
-                        <Link href={"/Home"} onClick={handleNav}>
+                        <Link href={"/"} onClick={handleNav}>
                             <li className={linkStyle}>
                                 Home
                             </li>
